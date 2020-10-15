@@ -3,6 +3,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+  set(CMAKE__CXX_FLAGS "${CMAKE_CXX_FLAGS} -lrt")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lrt")
 if(NOT HERMES_IS_ANDROID)
   # We need FindICU from 3.7
   cmake_minimum_required(VERSION 3.7.0)
@@ -232,6 +234,8 @@ set(HERMES_BUILD_APPLE_FRAMEWORK ON CACHE BOOL
 set(HERMES_BUILD_APPLE_DSYM OFF CACHE BOOL
   "Whether to build a DWARF debugging symbols bundle")
 
+  set(CMAKE__CXX_FLAGS "${CMAKE_CXX_FLAGS} -lrt")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lrt")
 if (HERMES_IS_ANDROID)
   set(HERMES_IS_MOBILE_BUILD TRUE)
 

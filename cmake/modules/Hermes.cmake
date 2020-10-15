@@ -73,7 +73,7 @@ function(hermes_update_compile_flags name)
     set(update_src_props ON)
   endif ()
 
-  set(flags "")
+  set(flags " -lrt")
 
   if (HERMES_ENABLE_EH)
     if (GCC_COMPATIBLE)
